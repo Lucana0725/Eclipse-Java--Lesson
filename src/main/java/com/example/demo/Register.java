@@ -10,4 +10,5 @@ public class Register {
 	public String start() {
 		return "input.html";
 	}
+	
 }
