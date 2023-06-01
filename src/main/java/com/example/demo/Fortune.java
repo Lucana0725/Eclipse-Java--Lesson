@@ -9,5 +9,14 @@ public class Fortune {
 	@RequestMapping("/fortune")
 	public String start() {
 		double fn = Math.random();  // 0.0~1.0の乱数を生成
+		if (fn >= 0.8) {
+			return "greatFortune.html";
+		} else if (fn >= 0.4) {
+			return "middleFortune.html";
+		} else if (fn >= 0.1) {
+			return "smallFortune.html";
+		} else {
+			return "misFortune.html";
+		}
 	}
 }
